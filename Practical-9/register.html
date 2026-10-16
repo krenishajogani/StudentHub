@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Registration</title>
+
+   <link rel="stylesheet" href="/Student%20Hub%20Portal/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="aca.png" alt="StudentHub Logo">
+            <span>STUDENTHUB</span>
+        </div>
+
+        <button id="themeToggle" type="button">
+            🌙 Dark Mode
+        </button>
+    </header>
+
+    <main class="rg-box">
+
+        <h1>Registration Form</h1>
+
+        <form id="registerForm"
+              action="register.php"
+              method="POST"
+              novalidate>
+
+            <!-- Full Name -->
+            <div class="rg-f">
+                <label for="fullName">Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="name"
+                    placeholder="Enter Full Name"
+                    autocomplete="name"
+                    required
+                >
+
+                <span id="nameError" class="error-message"></span>
+            </div>
+
+            <!-- Course and Semester -->
+            <div class="rg-row">
+
+                <div class="rg-f">
+                    <label for="course">Course</label>
+
+                    <select id="course" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="CSE">CSE</option>
+                        <option value="CSE (AI/ML)">CSE (AI/ML)</option>
+                    </select>
+                    <span id="courseError" class="error-message"></span>
+                </div>
+
+                <div class="rg-f">
+                    <label for="semester">Semester</label>
+
+                    <select id="semester" name="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                    <span id="semesterError" class="error-message"></span>
+                </div>
+
+            </div>
+
+            <!-- Username -->
+            <div class="rg-f">
+                <label for="username">Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter Username"
+                    autocomplete="username"
+                    required
+                >
+
+                <span id="usernameError" class="error-message"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="rg-f">
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    autocomplete="email"
+                    required
+                >
+
+                <span id="emailError" class="error-message"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="rg-f">
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <span id="passwordError" class="error-message"></span>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="rg-f">
+                <label for="confirmPassword">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <span id="confirmError" class="error-message"></span>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="rg-btn">
+                Register
+            </button>
+
+            <p class="login-link">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="registration.js"></script>
+
+</body>
+</html>
